@@ -1,0 +1,13 @@
+<div>
+  <div style="display: flex;">
+    <h4 style="margin-block-start: 5px;margin-block-end: 5px;">Widget's Card</h4>
+    <button style="margin-left: auto;" (click)="toggoleWidgetDetails()">{{ label }}</button>
+  </div>
+
+  <div *ngIf="widget.visible">
+    <ng-container [ngTemplateOutlet]="contentTemplateRef"></ng-container>
+
+  <div>
+    <ng-content select="app-like-share-ui"></ng-content>
+  </div>
+</div>
